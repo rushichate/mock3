@@ -7,6 +7,9 @@ require("dotenv").config()
 
 const app = express();
 app.use(express.json())
+app.get("/",()=>{
+    res.send("Welcome to masai library")
+})
 app.use("/users",userRouter)
 app.use("/books",bookRouter)
 
